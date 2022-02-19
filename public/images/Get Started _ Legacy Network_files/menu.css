@@ -1,0 +1,293 @@
+/*========================================================
+    1. Fonts, Variables
+========================================================*/
+/*========================================================
+    GLOBALS
+========================================================*/
+html, body {
+  height: 100%;
+  width: 100%; }
+
+@font-face {
+  font-family: 'North-Regular';
+  src: url("fonts/North-Regular.eot");
+  src: url("fonts/North-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/North-Regular.woff2") format("woff2"), url("fonts/North-Regular.woff") format("woff"), url("fonts/North-Regular.ttf") format("truetype"), url("fonts/North-Regular.svg#North-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.btn-light {
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  color: #00acef;
+  font-size: 1em;
+  padding: 6px 36px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s; }
+  .btn-light:hover {
+    background-color: #64c0ef;
+    color: #FFFFFF; }
+
+.btn {
+  border-radius: 4px;
+  background-color: #00acef;
+  color: #FFFFFF;
+  font-size: 1em;
+  padding: 6px 36px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s; }
+  .btn:hover {
+    background-color: #64c0ef; }
+
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto; }
+
+/*========================================================
+    CONTENT
+    headers, main content, footer etc...
+========================================================*/
+header.purl_container {
+  background: #2066bd;
+  padding: 0.375rem 0;
+  text-align: center;
+  color: #FFFFFF; }
+  header.purl_container .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    header.purl_container .container h4, header.purl_container .container a {
+      font-size: 16px;
+      color: #FFFFFF;
+      font-family: "Cabin Condensed", Helvetica, Arial, Sans-serif; }
+      header.purl_container .container h4:first-child, header.purl_container .container a:first-child {
+        text-align: left; }
+      header.purl_container .container h4:last-child, header.purl_container .container a:last-child {
+        text-align: right; }
+    header.purl_container .container h4 {
+      margin: 2px 0; }
+      header.purl_container .container h4:last-child {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1; }
+
+.public_page_container .banner {
+  background: url(/new_images/banner_bg.png) no-repeat center;
+  background-size: cover;
+  padding-bottom: 0;
+  position: relative; }
+  .public_page_container .banner.no-show {
+    padding-bottom: 0 !important; }
+    .public_page_container .banner.no-show:before {
+      content: normal; }
+  .public_page_container .banner:before {
+    content: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#002f4b), to(#dc4225));
+    background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+80&0+0,1+80 */
+    /* FF3.6-15 */
+    /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(90%, white));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 90%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+    /* IE6-9 */ }
+  .public_page_container .banner header {
+    height: 84px;
+    background: rgba(27, 68, 128, 0.4);
+    text-align: inherit; }
+    .public_page_container .banner header .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .public_page_container .banner header .container > a {
+        margin-top: 6px;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1; }
+      .public_page_container .banner header .container img {
+        height: 36px;
+        -ms-flex-item-align: center;
+            align-self: center; }
+      .public_page_container .banner header .container nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
+        .public_page_container .banner header .container nav ul {
+          margin: 0;
+          display: none;
+          position: absolute;
+          top: 84px;
+          text-align: right;
+          right: -50px;
+          font-size: 1.5rem;
+          background: #00acef;
+          color: white;
+          width: 50%;
+          z-index: 8;
+          padding: 1rem 41px 1.5rem 41px; }
+          .public_page_container .banner header .container nav ul li {
+            display: block; }
+            .public_page_container .banner header .container nav ul li a {
+              color: #FFFFFF;
+              font-family: "Cabin Condensed", Helvetica, Arial, Sans-serif; }
+              .public_page_container .banner header .container nav ul li a:hover {
+                text-decoration: underline; }
+        .public_page_container .banner header .container nav a.btn {
+          -ms-flex-item-align: center;
+              align-self: center;
+          font-weight: bold;
+          margin-left: .75rem; }
+        .public_page_container .banner header .container nav .fa-bars, .public_page_container .banner header .container nav .fa-minus {
+          margin-left: .5rem;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-item-align: center;
+              align-self: center;
+          cursor: pointer;
+          border: 1px solid #00acef;
+          padding: 6px 10px;
+          color: #FFFFFF;
+          background: #00acef;
+          border-radius: 4px; }
+  .public_page_container .banner .container {
+    display: none; }
+
+/*========================================================
+    LAYOUT
+    media queries
+========================================================*/
+/*****************************************************
+    min-width 768px
+******************************************************/
+@media screen and (min-width: 768px) {
+  header.purl_container {
+    text-align: right; }
+    header.purl_container h4 {
+      color: #FFFFFF;
+      font-family: "Cabin Condensed", Helvetica, Arial, Sans-serif;
+      font-size: 1rem; }
+
+  .public_page_container .banner {
+    background: url(/new_images/banner_bg.png) no-repeat top;
+    background-position-y: -247px;
+    background-size: cover;
+    padding-bottom: 0; }
+    .public_page_container .banner header {
+      height: 64px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .public_page_container .banner header .container {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row; }
+        .public_page_container .banner header .container nav ul {
+          top: 64px; }
+    .public_page_container .banner .container .banner_text {
+      font-family: "North-Regular", Helvetica, Arial, Sans-serif;
+      text-align: center; }
+      .public_page_container .banner .container .banner_text--sub_title {
+        font-size: 1.75rem;
+        margin-top: 4rem; }
+      .public_page_container .banner .container .banner_text--title {
+        font-size: 4rem; }
+      .public_page_container .banner .container .banner_text--info {
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 4rem; } }
+/*****************************************************
+    min-width 992px
+******************************************************/
+@media screen and (min-width: 992px) {
+  .public_page_container .banner header .container .fa-bars {
+    display: none !important; }
+  .public_page_container .banner header .container nav ul, .public_page_container .banner header .container nav li {
+    margin: 0;
+    padding: 0; }
+  .public_page_container .banner header .container nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+    height: 20px;
+    position: inherit;
+    top: inherit;
+    text-align: inherit;
+    right: inherit;
+    font-size: inherit;
+    background: none;
+    color: white;
+    width: inherit;
+    z-index: inherit;
+    padding: inherit; }
+    .public_page_container .banner header .container nav ul li {
+      display: block;
+      padding: 0 .5rem; }
+      .public_page_container .banner header .container nav ul li:last-child {
+        padding-right: 0; }
+      .public_page_container .banner header .container nav ul li a {
+        color: #FFFFFF;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease; }
+        .public_page_container .banner header .container nav ul li a:hover {
+          color: #818181; }
+      .public_page_container .banner header .container nav ul li:hover {
+        cursor: pointer; }
+        .public_page_container .banner header .container nav ul li:hover > ul {
+          visibility: visible;
+          opacity: 1;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
+      .public_page_container .banner header .container nav ul li ul {
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        padding-top: 22px;
+        position: absolute;
+        display: none;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .public_page_container .banner header .container nav ul li ul:hover {
+          visibility: visible;
+          opacity: 1;
+          display: block; }
+        .public_page_container .banner header .container nav ul li ul li {
+          clear: both;
+          width: 150px;
+          background-color: #00acef;
+          padding: .5rem; }
+          .public_page_container .banner header .container nav ul li ul li:last-child {
+            padding: .5rem; } }
+/*****************************************************
+    min-width 1200px
+******************************************************/
+/*****************************************************
+    min-width 1200px
+******************************************************/
+/*****************************************************
+    min-width 1200px
+******************************************************/
+
+/*# sourceMappingURL=menu.css.map */
