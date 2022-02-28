@@ -1,12 +1,8 @@
-     <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Monewaze 2021 </span>
-          </div>
+
+
+      <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+          <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022. Ormoc CardioMetabolic Clinic. All rights reserved.</span>
+          <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Developed by: <i class="ti-heart text-danger ml-1"></i></span>
         </div>
       </footer>
-      <!-- End of Footer -->
-
-
-

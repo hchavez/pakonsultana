@@ -1,93 +1,95 @@
-  @extends('layouts.user')
+  @extends('layouts.user2')
 
 @section('content')
 
-
-
-
-   
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-
-          </div>
-
-          <!-- Content Row -->
+<div class="content-wrapper">
           <div class="row">
-
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-m font-weight-bold text-primary text-uppercase mb-1">Today Refers</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $referrals_today }}</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-user-friends fa-3x text-gray-300"></i>
-                     
-                    </div>
+            <div class="col-md-12 grid-margin">
+              <div class="row">
+                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                  <h4 class="font-weight-bold">Welcome {{Auth::user()->firstname}}</h4>
+                 <!-- <h6 class="font-weight-normal mb-0">All systems are running smoothly! You have <span class="text-primary">3 unread alerts!</span></h6> -->
+                </div>
+                <div class="col-12 col-xl-4">
+                 <div class="justify-content-end d-flex">
+                  <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
+                    <button class="btn btn-sm btn-light bg-white dropdown-toggle" type="button" id="dropdownMenuDate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                     <i class="mdi mdi-calendar"></i> Today (10 Jan 2021)
+                    </button>
                   </div>
+                 </div>
                 </div>
               </div>
             </div>
-
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-success shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-m font-weight-bold text-success text-uppercase mb-1">Total Refers</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $referrals_all }}</div>
-                    </div>
-                    <div class="col-auto">
-                       <i class="fas fa-users fa-3x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-info shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-m font-weight-bold text-info text-uppercase mb-1">Total Groups</div>
-                      <div class="row no-gutters align-items-center">
-                        <div class="col-auto">
-                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">0</div>
-                        </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card tale-bg">
+                <div class="card-people mt-auto">
+                  <img src="images/dashboard/people.svg" alt="people">
+                  <div class="weather-info">
+                    <div class="d-flex">
+                      <div>
+                        <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>30<sup>C</sup></h2>
+                      </div>
+                      <div class="ml-2">
+                        <h4 class="location font-weight-normal">Ormoc City</h4>
+                        <h6 class="font-weight-normal">Philippines</h6>
                       </div>
                     </div>
-                    <div class="col-auto">
-                       <i class="fas fa-chart-bar fa-3x text-gray-300"></i>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- Pending Requests Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-warning shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-m font-weight-bold text-warning text-uppercase mb-1">Total Revenue</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">₱ {{ number_format(Auth::user()->wallet, 2, '.', ',') }}</div>
+            <div class="col-md-6 grid-margin transparent">
+              <div class="row">
+                <div class="col-md-6 mb-4 stretch-card transparent">
+                  <div class="card card-tale">
+                    <div class="card-body">
+                      <p class="mb-4">Today’s Bookings</p>
+                      <p class="fs-30 mb-2">4006</p>
+                      <p>10.00% (30 days)</p>
                     </div>
-                    <div class="col-auto">
-                       <i class="fas fa-ruble-sign fa-3x text-gray-300"></i>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4 stretch-card transparent">
+                  <div class="card card-dark-blue">
+                    <div class="card-body">
+                      <p class="mb-4">Total Bookings</p>
+                      <p class="fs-30 mb-2">61344</p>
+                      <p>22.00% (30 days)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
+                  <div class="card card-light-blue">
+                    <div class="card-body">
+                      <p class="mb-4">Number of Meetings</p>
+                      <p class="fs-30 mb-2">34040</p>
+                      <p>2.00% (30 days)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 stretch-card transparent">
+                  <div class="card card-light-danger">
+                    <div class="card-body">
+                      <p class="mb-4">Number of Clients</p>
+                      <p class="fs-30 mb-2">47033</p>
+                      <p>0.22% (30 days)</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          
+         
+          
+        
+
+     
 
           <!-- Content Row -->
 
@@ -99,7 +101,7 @@
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">My Referral Chart Report </h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Clinic Patient Report </h6>
                   <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -123,9 +125,9 @@
                   <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
                   <figure class="highcharts-figure">
-                     <div class="h6 mb-0 font-weight-bold text-gray-800">Total Sign Up Today: {{  $signup_today  }}</div>
-                      <div class="h6 mb-0 font-weight-bold text-gray-800">Total Sign Up Yesterday: {{  $countYesterday  }}</div>
-                      <div class="h6 mb-0 font-weight-bold text-gray-800">Total Sign Up From Last 7 days: {{  $countLastSevenDays  }}</div>
+                     <div class="h6 mb-0 font-weight-bold text-gray-800">Total Patients Today: </div>
+                      <div class="h6 mb-0 font-weight-bold text-gray-800">Total Patients Yesterday:</div>
+                      <div class="h6 mb-0 font-weight-bold text-gray-800">Total Patients From Last 7 days:</div>
                     <div id="container"></div>
                     <p class="highcharts-description"> 
                      
@@ -138,152 +140,4 @@
               
           </div>
 
-<style>
- .highcharts-figure, .highcharts-data-table table {
-  min-width: 310px; 
-  max-width: 800px;
-  margin: 1em auto;
-}
-
-#container {
-  height: 400px;
-}
-
-.highcharts-data-table table {
-  font-family: Verdana, sans-serif;
-  border-collapse: collapse;
-  border: 1px solid #EBEBEB;
-  margin: 10px auto;
-  text-align: center;
-  width: 100%;
-  max-width: 500px;
-}
-.highcharts-data-table caption {
-  padding: 1em 0;
-  font-size: 1.2em;
-  color: #555;
-}
-.highcharts-data-table th {
-  font-weight: 600;
-  padding: 0.5em;
-}
-.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
-  padding: 0.5em;
-}
-.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
-  background: #f8f8f8;
-}
-.highcharts-data-table tr:hover {
-  background: #f1f7ff;
-}
-  </style>
-
-  <script>
-
-var usersChart =  <?php echo json_encode($usersChart) ?>;
-var jan =  <?php echo json_encode($jan) ?>;
-var feb =  <?php echo json_encode($feb) ?>;
-var march =  <?php echo json_encode($march) ?>;
-var april =  <?php echo json_encode($april) ?>;
-var may =  <?php echo json_encode($may) ?>;
-var june =  <?php echo json_encode($june) ?>;
-var july =  <?php echo json_encode($july) ?>;
-var aug =  <?php echo json_encode($aug) ?>;
-var sep =  <?php echo json_encode($sep) ?>;
-var oct =  <?php echo json_encode($oct) ?>;
-var nov =  <?php echo json_encode($nov) ?>;
-var dec =  <?php echo json_encode($dec) ?>;
-
-Highcharts.chart('container', {
-  chart: {
-    type: 'column'
-  },
-  title: {
-    text: 'Monthly Sign up Report'
-  },
-  subtitle: {
-    text: ''
-  },
-  /** xAxis: {
-    min: 0,
-    title: {
-      text: 'Months'
-    }
-  }, **/
-  xAxis: {
-        categories: ['Jan','Feb','Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    title: {
-      text: 'Months'
-    }
-    },
-  yAxis: {
-    min: 0,
-    title: {
-      text: 'Headcount'
-    }
-  },
-  /**tooltip: {
-    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-      '<td style="padding:0"><b>{point.y} </b></td></tr>',
-    footerFormat: '</table>',
-    shared: true,
-    useHTML: true
-  },**/
-   tooltip: {
-        formatter: function () {
-            return 'Total Sign Up for <b>' + this.x +
-                '</b> is <b>' + this.y + '</b>';
-        }
-    },
-  plotOptions: {
-    column: {
-      pointPadding: 0.2,
-      borderWidth: 0
-    }
-  },
-  series: [{
-        data: [jan,feb,march, april, may, june,july,aug,sep,oct,nov,dec]
-    }]
-  /* series: [{
-    name: 'Sign Up',
-    data: usersChart
-
-  }] 
-
-  series: [{ name: 'march',
-                    data: march,
-                }, {
-                    name: 'april',
-                    data: april,
-                }, {
-                    name: 'may',
-                    data: may,
-                }, {
-                    name: 'june',
-                    data: june,
-                }, {
-                    name: 'july',
-                    data: july,
-                }, {
-                    name: 'aug',
-                    data: aug,
-                }, {
-                    name: 'sep',
-                    data: sep,
-                }, {
-                    name: 'oct',
-                    data: oct,
-                }, {
-                    name: 'nov',
-                    data: nov,
-                }, {
-                    name: 'dec',
-                    data: dec,
-                }] */
-
-});
-
-
-  </script>
 @endsection

@@ -21,19 +21,19 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body style="background: #4323aa !important">
+<body style="background: #ffffff !important">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="background: #4323aa !important">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="background: hsl(0, 0%, 100%) !important">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img class="img-profile" src="<?php echo url('/'); ?>/images/logo-front.png" style="height: 65px;">
+                    <img class="img-profile" src="<?php echo url('/'); ?>/images/logo-front.jpg" style="height: 65px;">
                 </a>
                 <br>
                
             </div>
         </nav>
 
-        <main class="py-4" style="background: #4323aa !important">
+        <main class="py-4" style="background: hsl(195deg, 79%, 47%) !important">
             @yield('content')
         </main>
     </div>
