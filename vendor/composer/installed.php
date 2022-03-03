@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => 'a695ed74c9acf7eb1c60729435cbe6fc2c78b714',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -379,6 +379,24 @@
                 0 => 'v8.83.2',
             ),
         ),
+        'infyomlabs/laravel-generator-helpers' => array(
+            'pretty_version' => 'v3.1.0',
+            'version' => '3.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../infyomlabs/laravel-generator-helpers',
+            'aliases' => array(),
+            'reference' => '256836551735034cc770efbcfe0e9febb21f76f2',
+            'dev_requirement' => false,
+        ),
+        'infyomlabs/laravel-ui-adminlte' => array(
+            'pretty_version' => 'v3.2.1',
+            'version' => '3.2.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../infyomlabs/laravel-ui-adminlte',
+            'aliases' => array(),
+            'reference' => '1b9f73f80a0a5da7f25fe51910bab08a91c2e1a3',
+            'dev_requirement' => false,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -404,12 +422,12 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'a695ed74c9acf7eb1c60729435cbe6fc2c78b714',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -446,6 +464,15 @@
             'install_path' => __DIR__ . '/../laravel/tinker',
             'aliases' => array(),
             'reference' => '5f2f9815b7631b9f586a3de7933c25f9327d4073',
+            'dev_requirement' => false,
+        ),
+        'laravel/ui' => array(
+            'pretty_version' => 'v3.4.5',
+            'version' => '3.4.5.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laravel/ui',
+            'aliases' => array(),
+            'reference' => 'f11d295de1508c5bb56206a620b00b6616de414c',
             'dev_requirement' => false,
         ),
         'laravelcollective/html' => array(
